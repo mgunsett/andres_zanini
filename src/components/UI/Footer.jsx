@@ -64,7 +64,7 @@ export default function Footer() {
             fontWeight="bold"
             textTransform="uppercase"
             fontSize={{ base: '46px', md: '36px' }}
-            letterSpacing="0.08em"
+            letterSpacing="-0.05em"
             color="brand.amber"
           >
             {playerData.initials}
