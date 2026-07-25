@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import theme from './theme'
 import App from './App'
 import './styles/globals.css'
-import './styles/nippo.css'
+import './styles/technor.css'
 
 gsap.registerPlugin(ScrollTrigger)
 

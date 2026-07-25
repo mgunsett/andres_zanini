@@ -1,0 +1,132 @@
+/**
+* @license
+*
+* Font Family: Technor
+* URL: https://www.fontshare.com/fonts/technor
+*
+* Technor Extralight
+* Technor Light
+* Technor Regular
+* Technor Medium
+* Technor Bold
+* Technor Variable (Variable font)
+*
+* Todas las variantes estáticas comparten el mismo font-family ('Technor')
+* y se distinguen por font-weight, para que fontWeight="bold" (Chakra)
+* resuelva automáticamente a Technor-Bold, etc.
+*/
+@font-face {
+  font-family: 'Technor';
+  src: url('../../assets/fonts/Technor-Extralight.woff2') format('woff2'),
+       url('../../assets/fonts/Technor-Extralight.woff') format('woff'),
+       url('../../assets/fonts/Technor-Extralight.ttf') format('truetype');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src: url('../../assets/fonts/Technor-Light.woff2') format('woff2'),
+       url('../../assets/fonts/Technor-Light.woff') format('woff'),
+       url('../../assets/fonts/Technor-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src: url('../../assets/fonts/Technor-Regular.woff2') format('woff2'),
+       url('../../assets/fonts/Technor-Regular.woff') format('woff'),
+       url('../../assets/fonts/Technor-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src: url('../../assets/fonts/Technor-Medium.woff2') format('woff2'),
+       url('../../assets/fonts/Technor-Medium.woff') format('woff'),
+       url('../../assets/fonts/Technor-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor';
+  src: url('../../assets/fonts/Technor-Bold.woff2') format('woff2'),
+       url('../../assets/fonts/Technor-Bold.woff') format('woff'),
+       url('../../assets/fonts/Technor-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* Variante variable — se deja disponible con family propia por si algún
+* componente necesita un peso intermedio vía font-variation-settings.
+* No se descarga a menos que se referencie explícitamente 'Technor-Variable'.
+*
+* font-variation-settings: 'wght' 450;
+* ejes disponibles: 'wght' (200 a 700)
+*/
+@font-face {
+  font-family: 'Technor-Variable';
+  src: url('../../assets/fonts/Technor-Variable.woff2') format('woff2'),
+       url('../../assets/fonts/Technor-Variable.woff') format('woff'),
+       url('../../assets/fonts/Technor-Variable.ttf') format('truetype');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/**
+* Familias independientes por peso.
+* Cada una declara font-weight: 400 (normal) porque contiene una única
+* variante: así se puede usar fontFamily="Technor-Bold" (por ejemplo) sin
+* necesidad de sumar fontWeight="bold" en el componente para que resuelva
+* a la variante correcta.
+*/
+@font-face {
+  font-family: 'Technor-Extralight';
+  src: url('../../assets/fonts/Technor-Extralight.woff2') format('woff2'),
+       url('../../assets/fonts/Technor-Extralight.woff') format('woff'),
+       url('../../assets/fonts/Technor-Extralight.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor-Light';
+  src: url('../../assets/fonts/Technor-Light.woff2') format('woff2'),
+       url('../../assets/fonts/Technor-Light.woff') format('woff'),
+       url('../../assets/fonts/Technor-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor-Regular';
+  src: url('../../assets/fonts/Technor-Regular.woff2') format('woff2'),
+       url('../../assets/fonts/Technor-Regular.woff') format('woff'),
+       url('../../assets/fonts/Technor-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor-Medium';
+  src: url('../../assets/fonts/Technor-Medium.woff2') format('woff2'),
+       url('../../assets/fonts/Technor-Medium.woff') format('woff'),
+       url('../../assets/fonts/Technor-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Technor-Bold';
+  src: url('../../assets/fonts/Technor-Bold.woff2') format('woff2'),
+       url('../../assets/fonts/Technor-Bold.woff') format('woff'),
+       url('../../assets/fonts/Technor-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}

@@ -90,9 +90,16 @@ const dev = {
 const theme = extendTheme({
   colors: { brand, dev },
   fonts: {
-    heading:   'Nippo',
-    body:      `Nippo`,
-    mono:      `Nippo`,
+    heading:   'Technor',
+    body:      `Technor`,
+    mono:      `Technor`,
+    // Referencias completas por peso: permiten usar, por ejemplo,
+    // fontFamily="Technor-Bold" sin tener que sumar fontWeight en el componente.
+    'Technor-Extralight': 'Technor-Extralight',
+    'Technor-Light':      'Technor-Light',
+    'Technor-Regular':    'Technor-Regular',
+    'Technor-Medium':     'Technor-Medium',
+    'Technor-Bold':       'Technor-Bold',
   },
   styles: {
     global: {

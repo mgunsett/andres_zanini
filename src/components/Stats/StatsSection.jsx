@@ -26,7 +26,7 @@ const STATS_DESIGN = 'anillos'
 //  'carrusel' → línea de tiempo horizontal con arrastre (original)
 //  'vertical' → línea de tiempo vertical alternada (nuevo)
 //  'tarjetas' → vitrina horizontal de fichas con barra de progreso (nuevo)
-const CLUBS_DESIGN = 'tarjetas'
+const CLUBS_DESIGN = 'carrusel'
 
 function BioCard() {
   const BIO = [

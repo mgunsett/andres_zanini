@@ -28,36 +28,34 @@
   }
 }
 
+@media screen and (max-width: 370px){
+  .player-name-container {
+    padding-top: 10px !important;
+  }
+}
+
 @media screen and (max-width: 390px){
   .player-photo-container {
     padding-top: 80px !important;
-    padding-left: 2px !important;
+    margin-left: -10px !important;
   }
-  .player-photo { 
-    width: 260px !important;
+  .player-photo {
+    width: 410px !important;
     max-width: none !important;
   }
-  .player-number {
-    font-size: 90px !important;
-  }
   .player-name-container {
-    top: 35px !important;
+    padding-top: 245px !important;
   }
   .player-name {
-    font-size: 47px !important;
-  }
-  .player-info {
-    top: 420px !important;
-    left: 260px !important;
+    font-size: 97px !important;
   }
   #player-info-text {
-    gap: 2px !important;
+    gap: 1px !important;
     .text {
       font-size: 10px !important;
     }
   }
-  .hero-bg1 {
-    margin-left: 60px !important;
-    margin-bottom: -120px !important;
-  }
+  .player-number {
+      font-size: 140px !important;
+    }
 }

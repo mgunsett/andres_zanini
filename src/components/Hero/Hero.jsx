@@ -7,6 +7,7 @@ import MatchBox from './MatchBox'
 import { playerData } from '../../data/playerData'
 import useMatches from '../../hooks/useMatches'
 import heroBg from '@assets/polaco3.webp'
+import heroBg2 from '@assets/polaco2.webp'
 import '../../styles/globals.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -17,10 +18,10 @@ function PlayerPanel() {
   const [amber] = useToken('colors', ['brand.amber'])
   return (
     <Flex
-      direction={{ base: 'column', md: 'row' }}
+      direction={'row'}
       justifyContent={'flex-start'}
-      alignItems={'flex-start'}
-      gap={{ base: 0, md: 4 }}
+      alignItems={'flex-start' }
+      gap={4}
       fontFamily='heading'
       fontWeight="bold"
     >
@@ -35,8 +36,8 @@ function PlayerPanel() {
       >
         {playerData.number}
       </Text>
-      <Box w={{ base: '100px', md: "1px" }} h={{ base: "1px", md: "70px", lg: "100px" }} bg="brand.amber" mt={{ base: 2, md: 8 }}/>
-      <Flex id="player-info-text" direction={'column'} justifyContent={'flex-start'} gap={1} mt={{ base: 4, md: 8 }}>
+      <Box w={'1px'} h={{ base: '80px', md: '100px' }} bg="brand.amber" mt={{ base: 6, md: 8 }}/>
+      <Flex id="player-info-text" direction={'column'} justifyContent={'flex-start'} gap={1} mt={{ base: 6, md: 8 }}>
         <Flex gap={1} justifyContent='flex-start' alignItems={{ base: 'flex-start', md: 'center' }} direction={{ base: 'column', md: 'row' }}>
           <Text className='text-title' fontSize={{ base: '9px', md: "10px" }} color="brand.bone"
             textTransform="uppercase" letterSpacing="widest">
@@ -47,13 +48,13 @@ function PlayerPanel() {
             {playerData.position}
           </Text>
         </Flex>
-        <Flex justifyContent='flex-start' alignItems='center' gap={{ base: '10px', md: '14px' }}>
+        <Flex justifyContent={'flex-start'} alignItems='center' gap={{ base: '10px', md: '14px' }}>
           <Image src={playerData.nationalityFlag} w={{ base: '15px', md: '25px' }} />
           <Text className='text' mb={'-5px'} fontSize={{ base: 'xs', md: "md" }} color="brand.amber" letterSpacing="wider">
             {playerData.nationality}
           </Text>
         </Flex>
-        <Flex justifyContent='flex-start' alignItems={'flex-end'} gap={{ base: '8px', md: '10px' }} spacing={1} mt={'3px'} ml={-1}>
+        <Flex justifyContent={{ base: 'flex-end', md: 'flex-start' }} alignItems={'flex-end'} gap={{ base: '8px', md: '10px' }} spacing={1} mt={'3px'} ml={-1}>
           <Image src={playerData.logoCurrentClub} ml={{ base: '2px', md: 'none' }} w={{ base: '20px', md: '30px' }} h={{ base: '20px', md: '30px' }} />
           <Text className='text' fontSize={{ base: 'xs', md: "md" }} color="brand.amber" letterSpacing="wider">
             {playerData.currentClub}
@@ -133,7 +134,7 @@ export default function Hero() {
           justifyContent="center"
           alignItems={{ base: 'flex-end', md: 'flex-start' }}
           mt={{ base: 20, md: 12 }}
-          ml={{ base: '0%', md: '25%' }}
+          ml={{ base: '0%', md: '0%' }}
           sx={{
             maskImage:
               'radial-gradient(120% 90% at 50% 30%, black 35%, transparent 78%)',
@@ -141,8 +142,34 @@ export default function Hero() {
               'radial-gradient(120% 90% at 50% 30%, black 35%, transparent 78%)',
           }}
         >
+           <Image
+            className="hero-bg2"
+            position="absolute"
+            top={{ base: '260px', md: 80 }}
+            left={0}
+            right={80}
+            bottom={0}
+            m={{ base: '0px', md: 'auto' }}
+            src={heroBg2}
+            alt=""
+            aria-hidden="true"
+            draggable={false}
+            zIndex={1}
+            w={{ base: '900px', md: '50vw' }}
+            h={{ base: '450px', md: '100%' }}
+            objectFit={{ base: 'cover', md: 'contain' }}
+            objectPosition={{ base: 'center top', md: 'center top' }}
+            opacity={{ base: 0.21, lg: 0.20 }}
+            filter="grayscale(100%) contrast(1.05)"
+            sx={{
+              mixBlendMode: 'luminosity',
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 18%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 18%)',
+            }}
+          />
           <Image
             className="hero-bg1"
+            display={{ base: 'none', md: 'block' }}
             src={heroBg}
             alt=""
             aria-hidden="true"
@@ -155,7 +182,7 @@ export default function Hero() {
             opacity={{ base: 0.21, lg: 0.20 }}
             filter="grayscale(100%) contrast(1.05)"
             sx={{ mixBlendMode: 'luminosity' }}
-            mr={{ base: '-550px', md: '-500px' }}
+            mr={{ base: '-400px', md: '-1000px' }}
             mb={{ base: '-100px', md: 0 }}
           />
          
@@ -170,7 +197,7 @@ export default function Hero() {
           pl={{ base: '2%', lg: '12%' }}
           pt={{ base: '23%', lg: '5%' }}
           display="flex"
-          justifyContent={{ base: 'flex-start', lg: 'flex-start' }}
+          justifyContent={{ base: 'flex-start', lg: 'center' }}
           alignItems={{ base: 'flex-start', lg: 'flex-start' }}
           pointerEvents="none"
         >
@@ -184,7 +211,7 @@ export default function Hero() {
               src={playerData.image}
               alt={`${playerData.displayName}, ${playerData.position.toLowerCase()} profesional de ${playerData.currentClub}`}
               h={{ base: '100%', lg: '100%' }}
-              w={{ base: '68vw', lg: '30vw' }}
+              w={{ base: '98vw', lg: '30vw' }}
               objectFit="contain"
               objectPosition="bottom center"
               draggable={false}
@@ -201,42 +228,26 @@ export default function Hero() {
           pointerEvents="none"
           display="flex"
           flexDir="column"
-          alignItems={{ base: 'center', md: 'flex-start' }}
-          justifyContent={{ base: 'flex-start', md: 'center' }}
-          pt={{ base: '30%', lg: '19%' }}
-          ml={{ base: 0, md: '37%' }}
+          alignItems='flex-start'
+          justifyContent={{ base: 'flex-start', md: 'flex-start' }}
+          pt={{ base: '50%', sm: '40%', lg: '10%' }}
+          ml={{ base: 0, md: '20%' }}
         >
           <Flex 
           direction="column" 
           as="h1" 
           overflow="hidden"
+          justifyContent={{ base: 'center', md: 'flex-start' }}
+          alignItems={{ base: 'flex-start', md: 'flex-end' }}
           >
-              <Text
-                ref={line1Ref}
-                className="player-name"
-                as="span"
-                display="block"
-                fontFamily='Nippo'
-                fontWeight="bold"
-                letterSpacing="2px"
-                textTransform="uppercase"
-                fontSize={{ base: '12vw', md: '16vw', lg: '5vw' }}
-                color="brand.amber"
-                lineHeight={0.9}
-                style={{ opacity: 0 }}
-                ml={{ base: 2, md: 0 }}
-                mb={'-5px'}
-              >
-                {playerData.name}
-              </Text>            
-
             <Text
               ref={line2Ref}
+              className="player-name"
               as="span"
               display="block"
-              fontFamily='Nippo'
+              fontFamily='Technor'
               fontWeight="bold"
-              fontSize={{ base: '22vw', md: '16vw', lg: '10vw' }}
+              fontSize={{ base: '24vw', sm: '20vw', md: '16vw', lg: '17vw' }}
               letterSpacing="2px"
               color="transparent"
               lineHeight={0.9}
@@ -246,6 +257,22 @@ export default function Hero() {
             >
               {playerData.fullName}
             </Text>
+              <Text
+                ref={line1Ref}
+                as="span"
+                display="block"
+                fontFamily='Technor-Bold'
+                letterSpacing="2px"
+                textTransform="uppercase"
+                fontSize={{ base: '15vw', md: '16vw', lg: '10vw' }}
+                color="brand.amber"
+                lineHeight={0.9}
+                style={{ opacity: 0 }}
+                ml={{ base: 2, md: 0 }}
+                mt={{ base: '-10px', md: '-40px' }}
+              >
+                {playerData.name}
+              </Text>            
 
             
           </Flex>
@@ -254,9 +281,8 @@ export default function Hero() {
         <Box
           className="player-info"
           position="absolute"
-          bottom={{ base: 'auto', lg: '20%' }}
-          left={{ base: '70%', lg: '37%' }}
-          top={{ base: '52%', lg: '38%' }}
+          left={{ base: '2%', lg: '20%' }}
+          top={{ base: '16%', md: '52%', lg: '49%' }}
           zIndex={15}
         >
           <PlayerPanel />

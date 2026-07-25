@@ -8,11 +8,10 @@ import polaco1 from '@assets/polaco1.webp'
 import argentina from '@assets/argentina.webp'
 import escudo_serena from '@assets/escudo_serena.webp'
 //Escudos trayectoria
-import escudoHuracan from '@assets/escudos/escudo_huracan.png'
-import escudoNewells from '@assets/escudos/escudo_newells.webp'
-import escudoRacing from '@assets/escudos/escudo_racing.webp'
-import escudoSanlorenzo from '@assets/escudos/escudo_sanlorenzo.webp'
-import escudoTalleres from '@assets/escudos/escudo_talleres.webp'
+import escudoAcassuso from '@assets/escudos/escudo_acassuso.webp'
+import escudoChacarita from '@assets/escudos/escudo_chacarita.webp'
+import escudoGuemes from '@assets/escudos/escudo_guemes.webp'
+import escudoLigadequito from '@assets/escudos/escudo_ligadequito.webp'
 import escudoTigre from '@assets/escudos/escudo_tigre.webp'
 //Gallery
 import image1 from '@assets/gallery/image1.webp'
@@ -35,6 +34,7 @@ import image17 from '@assets/gallery/image17.webp'
 import image18 from '@assets/gallery/image18.webp'
 import image19 from '@assets/gallery/image19.webp'
 import image20 from '@assets/gallery/image20.webp'
+import zanini3 from '@assets/zanini3.webp'
 //Video
 import photoGraph from '@assets/perfil_video.webp'
 //Prensa
@@ -47,25 +47,25 @@ import ledsports from '@assets/contact3.webp'
 import moon from '@assets/contact4.webp'
 
 
-const name = 'HECTOR'
-const fullName = 'FERTOLI'
+const name = 'ANDRES'
+const fullName = 'ZANINI'
 
 export const playerData = {
   name,
   fullName,
   initials: `${name[0]}${fullName[0]}`,
   displayName: `${name} ${fullName}`,
-  number: 8,
-  position: 'Mediocampista',
-  positionShort: 'MC',
+  number: 2,
+  position: 'Defensor Central',
+  positionShort: 'DC',
   nationality: 'Argentina',
   nationalityFlag: argentina,
-  age: 31,
-  height: '1.74m',
-  weight: '67kg',
+  age: 29,
+  height: '1.88m',
+  weight: '80kg',
   foot: 'Derecho',
-  birthDate: '03 / 12 / 1994  ',
-  birthPlace: 'El Trébol, Argentina',
+  birthDate: '18 / 01 / 1997  ',
+  birthPlace: 'Buenos Aires, Argentina',
   currentClub: 'Deportes La Serena',
   logoCurrentClub: escudo_serena,
   image: polaco1,
@@ -73,20 +73,20 @@ export const playerData = {
 
   stats: [
     { label: 'Velocidad',      value: 90 },
-    { label: 'Remate',     value: 84 },
-    { label: 'Regate',         value: 88 },
-    { label: 'Pases',    value: 91 },
-    { label: 'Presión Alta',   value: 85 },
+    { label: 'Juego Aéreo',     value: 92 },
+    { label: 'Intercepciones',         value: 85 },
+    { label: 'Pases',    value: 86 },
+    { label: 'Presión Alta',   value: 87 },
     { label: 'Visión de Juego',value: 89 },
   ],
 
   seasonStats: [
-    { label: 'Partidos',    value: 49},
-    { label: 'Goles',       value: 2},
-    { label: 'Pases Completos', value: 444},
-    { label: 'Tiros al arco', value: 11},
-    { label: 'Min / Part.', value: "1,480'" },
-    { label: 'Valoración', value: 8.5},
+    { label: 'Partidos',    value: 45},
+    { label: 'Recuperaciones',       value: 95},
+    { label: 'Pases Completos', value: 922},
+    { label: 'Duelos Ganados', value: 150},
+    { label: 'Min / Part.', value: "2,775'" },
+    { label: 'Valoración', value: 8.4},
 
   ],
 
@@ -94,121 +94,114 @@ export const playerData = {
     {
       name:    'Deportes La Serena',
       country: 'Chile',
-      years:   '2026 — Actualidad',
+      years:   '2025 — Actualidad',
       logo:    escudo_serena,
       titles:  [],
+      info:    '',
+    },
+    {
+      name:    'Liga de Quito',
+      country: 'Ecuador',
+      years:   '2024 — 2025',
+      logo:    escudoLigadequito,
+      titles:  ['Serie A de Ecuador 2024'],
       info:    'Préstamo',
     },
     {
-      name:    'C.A Tigre',
-      country: 'Argentina',
-      years:   '2025',
-      logo:    escudoTigre,
-      titles:  [],
-      info:    'Préstamo',
-    },
-    {
-      name:    'C.A Huracán',
+      name:    'Chacarita Juniors',
       country: 'Argentina',
       years:   '2023 — 2024',
-      logo:    escudoHuracan,
+      logo:    escudoChacarita,
       titles:  [],
       info:    'Préstamo',
     },
     {
-      name:    'Talleres de Córdoba',
+      name:    'C.A Güemes',
       country: 'Argentina',
-      years:   '2021 — 2022',
-      logo:    escudoTalleres,
+      years:   '2022 — 2023',
+      logo:    escudoGuemes,
       titles:  [],
       info:    'Préstamo',
     },
     {
-      name:    'Racing Club',
+      name:    'Acassuso',
       country: 'Argentina',
-      years:   '2020 — Actualidad',
-      logo:    escudoRacing,
-      titles:  ['Supercopa Internacional 2023'],
-      info:    '',
-    },
-    {
-      name:    'San Lorenzo de Almagro',
-      country: 'Argentina',
-      years:   '2019',
-      logo:    escudoSanlorenzo,
+      years:   '2018 — 2024',
+      logo:    escudoAcassuso,
       titles:  [],
       info:    '',
     },
     {
-      name:    'Newell\'s Old Boys',
+      name:    'C.A. Tigre',
       country: 'Argentina',
-      years:   '2014',
-      logo:    escudoNewells,
+      years:   '2017',
+      logo:    escudoTigre,
       titles:  [],
-      info:    '',
+      info:    'Inferiores y Reserva',
     },
+
   ],
 
   videos: [
     {
       id: 'v2',
-      instagramId: 'DYqG3t8xDzY',
-      title: 'Highlight \'26',
-      fullTitle: 'Hector Fertoli | Jugadas destacadas \'26',
-      season: 'Highlight \'26',
+      instagramId: 'DJ211zuqe19',
+      title: 'Gol vs Dep. Iquique',
+      fullTitle: 'Andres Zanini | Gol \'26',
+      season: 'Gol vs Dep. Iquique',
       league: 'LIGA 1 2025',
-      thumbnail: image8,
-      cover: image8,
-      category: 'Universitario',
+      thumbnail: image2,
+      cover: image2,
+      category: 'Deportes La Serena',
     },
     {
       id: 'v3',
-      instagramId: 'DKQcYIht3oD',
-      title: 'Highlight Tigre \'25',
-      fullTitle: 'Hector Fertoli | Jugadas destacadas \'25',
-      season: 'Highlight Tigre \'25',
-      league: 'Liga Argentina',
-      thumbnail: image15,
-      cover: image15,
+      instagramId: 'DTIuYwdkQPL',
+      title: 'Highlight \'25',
+      fullTitle: 'Andres Zanini | Jugadas destacadas \'25',
+      season: 'Highlight  \'25',
+      league: 'Liga 1',
+      thumbnail: image9,
+      cover: image9,
       category: 'Highlights',
     },
     
     {
       id: 'v3',
-      instagramId: 'DEYUrsoy4L_',
-      title: 'Highlight Huracán \'24',
-      fullTitle: 'Hector Fertoli | Asistencias y juego',
-      season: 'Highlight Huracán \'24',
-      league: 'Liga Argentina 2024',
-      thumbnail: image20,
-        cover: image20,
-        category: 'Highlights',
+      instagramId: 'C1iPcg_rJB0',
+      title: 'Highlight Chacarita \'23',
+      fullTitle: 'Andres Zanini | Asistencias y juego',
+      season: 'Highlight Chacarita \'23',
+      league: 'Liga Argentina 2023',
+      thumbnail: zanini3,
+      cover: zanini3,
+      category: 'Highlights',
     },
   ],
 
 
 
   gallery: [
-    { id: 1, src: image1, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 2, src: image2, alt: 'Hector Fertoli', caption: 'Universitario',    category: 'Festejo', aspect: 'tall' },
-    { id: 3, src: image3, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Entrenamiento', aspect: 'square' },
-    { id: 4, src: image4, alt: 'Hector Fertoli', caption: 'Universitario',     category: 'Partido', aspect: 'wide' },
-    { id: 5, src: image5, alt: 'Hector Fertoli', caption: 'Universitario',   category: 'Equipo',  aspect: 'wide' },
-    { id: 6, src: image6, alt: 'Hector Fertoli', caption: 'Universitario',       category: 'Retrato', aspect: 'tall' },
-    { id: 7, src: image7, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 8, src: image8, alt: 'Hector Fertoli', caption: 'Universitario',     category: 'Partido', aspect: 'wide' },
-    { id: 9, src: image9, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 10, src: image10, alt: 'Hector Fertoli', caption: 'Universitario',     category: 'Partido', aspect: 'wide' },
-    { id: 11, src: image11, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 12, src: image12, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 13, src: image13, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 14, src: image14, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 15, src: image15, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 16, src: image16, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 17, src: image17, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 18, src: image18, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 19, src: image19, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
-    { id: 20, src: image20, alt: 'Hector Fertoli', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 1, src: image1, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 2, src: image2, alt: 'Andres Zanini', caption: 'Universitario',    category: 'Festejo', aspect: 'tall' },
+    { id: 3, src: image3, alt: 'Andres Zanini', caption: 'Universitario', category: 'Entrenamiento', aspect: 'square' },
+    { id: 4, src: image4, alt: 'Andres Zanini', caption: 'Universitario',     category: 'Partido', aspect: 'wide' },
+    { id: 5, src: image5, alt: 'Andres Zanini', caption: 'Universitario',   category: 'Equipo',  aspect: 'wide' },
+    { id: 6, src: image6, alt: 'Andres Zanini', caption: 'Universitario',       category: 'Retrato', aspect: 'tall' },
+    { id: 7, src: image7, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 8, src: image8, alt: 'Andres Zanini', caption: 'Universitario',     category: 'Partido', aspect: 'wide' },
+    { id: 9, src: image9, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 10, src: image10, alt: 'Andres Zanini', caption: 'Universitario',     category: 'Partido', aspect: 'wide' },
+    { id: 11, src: image11, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 12, src: image12, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 13, src: image13, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 14, src: image14, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 15, src: image15, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 16, src: image16, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 17, src: image17, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 18, src: image18, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 19, src: image19, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
+    { id: 20, src: image20, alt: 'Andres Zanini', caption: 'Universitario', category: 'Partido', aspect: 'wide' },
 
   ],
 
@@ -217,8 +210,8 @@ export const playerData = {
       label: 'Instagram',
       icon: FaInstagram,
       iconBg: FaInstagram,
-      handle: '@rayofertoli',
-      url: 'https://www.instagram.com/rayofertoli/',
+      handle: '@andrees_zani',
+      url: 'https://www.instagram.com/andrees_zani/',
       hoverColor: '#E1306C',
       hoverGradient: 'insta-gradient',
     },
@@ -226,8 +219,8 @@ export const playerData = {
       label: 'TransferMarkt',
       image: transfermkt,
       iconBg: IoMdStats,
-      handle: '/hector-fertoli',
-      url: 'https://www.transfermarkt.com.ar/hector-fertoli/profil/spieler/424024',
+      handle: '/andres-zanini',
+      url: 'https://www.transfermarkt.com.ar/andres-zanini/profil/spieler/504397',
       hoverColor: '#2e73f2',
     },
   ],
