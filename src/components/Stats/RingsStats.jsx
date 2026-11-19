@@ -3,6 +3,8 @@ import { Box, Grid, SimpleGrid, Text, useToken } from '@chakra-ui/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { playerData } from '../../data/playerData.js'
+import useSeasonStats from '../../hooks/useSeasonStats'
+import { seasonTiles, seasonTitle } from '../../lib/seasonTiles'
 import { ColumnShell, ProfileColumn, SeasonColumn, OverallRating } from './RadarStats.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -130,6 +132,10 @@ function RingsGrid() {
 
 // ─── BLOQUE PRINCIPAL ─────────────────────────────────────────────
 export function RingsStats() {
+  // Temporada en curso desde API-Football; sin datos, los valores fijos.
+  const season = useSeasonStats()
+  const seasonItems = season ? seasonTiles(season) : playerData.seasonStats
+
   const overall = Math.round(
     playerData.stats.reduce((sum, s) => sum + s.value, 0) / playerData.stats.length
   )
@@ -189,8 +195,9 @@ export function RingsStats() {
           borderColor="brand.amber !important"
           pl={{ base: 0, lg: 10 }}
         >
-          <ColumnShell title="Temporada 2025 / 2026" side="right">
-            <SeasonColumn items={playerData.seasonStats} />
+          {/* key: al llegar los datos se vuelve a montar y se anima de nuevo */}
+          <ColumnShell key={season ? 'api' : 'static'} title={seasonTitle(season, 'Temporada 2025 / 2026')} side="right">
+            <SeasonColumn items={seasonItems} />
           </ColumnShell>
         </Box>
       </Grid>
